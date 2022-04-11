@@ -6,24 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+         android:src="@drawable/bg"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo1" />
+
+
     <EditText
+        android:id="@+id/registernotxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Register NO"
-        android:layout_alignParentTop="true"
-        android:layout_margin="16dp"
+        android:layout_below="@id/logo"
+        android:layout_marginHorizontal="50dp"
+        android:hint="RegisterNumber:"
         android:inputType="number"
-        android:id="@+id/registernotxt"
-        />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/passwordtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/registernotxt"
-        android:layout_margin="16dp"
-        android:hint="Password"
-        android:inputType="textPassword"/>
+        android:layout_marginHorizontal="50dp"
+        android:hint="Password:"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textStyle="bold" />
     
     <Button
         android:layout_width="match_parent"
@@ -45,7 +65,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New User"
+        android:text="Do have a account Signup Below?"
+        android:textStyle="bold|italic"
+        android:textSize="17sp"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/signinbtn"
         android:layout_marginTop="16dp"/>
