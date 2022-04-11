@@ -9,7 +9,14 @@ import kotlinx.android.synthetic.main.activity_signup.registernotxt
 import kotlinx.android.synthetic.main.activity_signup.signupbtn
 import android.R.attr.data
 import android.app.Activity
+import android.app.ProgressDialog
 import android.net.Uri
+import android.widget.ArrayAdapter
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class SignupActivity : AppCompatActivity() {
@@ -17,7 +24,23 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+        var auth:FirebaseAuth = Firebase.auth
+
+        var departments = resources.getStringArray(R.array.Departments)
+
+        var arrayAdapter = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,departments)
+        arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+
+        depart.adapter=arrayAdapter
+
+
+
         signupbtn.setOnClickListener {
+
+            var progressDialog: ProgressDialog = ProgressDialog(this)
+
+            progressDialog.setMessage("In Process");
+            progressDialog.show();
 
             if (registernotxt.text.equals(null)) {
                 registernotxt.setError("Register Number Required")
@@ -38,35 +61,36 @@ class SignupActivity : AppCompatActivity() {
                 mailtxt.setError("Email Required")
                 return@setOnClickListener
             }
-        }
 
-        editimgtxt.setOnClickListener {
+            var mail=mailtxt.text.toString()
+            var password = passwordtxt.text.toString()
 
-            var intent = Intent()
-            intent.setType("image/*")
-            intent.setAction(Intent.ACTION_GET_CONTENT)
+            auth.createUserWithEmailAndPassword(mail,password).addOnCompleteListener(this){ task ->
 
-            startActivityForResult(Intent.createChooser(intent, "Select Picture"), 200)
+                if(task.isSuccessful) {
+                    var user = FirebaseAuth.getInstance().currentUser
+                    user?.sendEmailVerification()?.addOnCompleteListener(this) { task ->
+                        var ref = Firebase.database.reference.child("Users").child(Firebase.auth.currentUser!!.uid)
+                        ref.child("Mail").setValue(mail)
+                        ref.child("Name").setValue(nametxt.text.toString())
+                        ref.child("Reg_no").setValue(registernotxt.text.toString())
+                        ref.child("Dept").setValue(depart.selectedItem.toString())
 
-        }
+                        ref=Firebase.database.reference.child("Reg_No").child(registernotxt.text.toString())
+                        ref.setValue(mail)
 
-        fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
-            super.onActivityResult(requestCode, resultCode, data);
-
-            if (resultCode === RESULT_OK) {
-
-                // compare the resultCode with the
-                // SELECT_PICTURE constant
-                if (requestCode === 200) {
-                    // Get the url of the image from data
-                    var selectedImageUri = data.data
-                    if (null != selectedImageUri) {
-                        // update the preview image in the layout
-                        profileimg.setImageURI(selectedImageUri)
+                        var intent = Intent(this,Feeds::class.java)
+                        startActivity(intent)
                     }
                 }
             }
 
         }
+
+        editimgtxt.setOnClickListener {
+
+
+        }
+
     }
 }
