@@ -1,15 +1,9 @@
 package com.example.myapplication
 
-import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+import android.text.Html
 import android.view.View
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.passwordtxt
@@ -21,15 +15,10 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        val text = "<font color=#FF000000>Don't have a account? </font><font color=#ffffff>Signup Below</font>"
+        signupnote.setText(Html.fromHtml(text))
 
         signinbtn.setOnClickListener {
-
-            var progressDialog:ProgressDialog = ProgressDialog(this)
-
-            progressDialog.setMessage("In Process");
-            progressDialog.show();
-
-            var mail:String=" "
 
             if(registernotxt.text.equals(null)){
                 registernotxt.setError("Register Number Required")
@@ -41,22 +30,6 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            var ref=Firebase.database.reference.child("Reg_No").child(registernotxt.text.toString())
-
-            ref.addValueEventListener( object : ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    if(!snapshot.value.toString().isEmpty()){
-                        movenxt(snapshot.value.toString(),passwordtxt.text.toString())
-                    }
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-
-
-            })
-
         }
 
         signupbtn.setOnClickListener {
@@ -67,12 +40,4 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun movenxt(mail: String, pass: String) {
-        var auth=Firebase.auth.signInWithEmailAndPassword(mail,pass).addOnCompleteListener{
-
-            var intent = Intent(this,Feeds::class.java)
-            startActivity(intent)
-
-        }
-    }
 }

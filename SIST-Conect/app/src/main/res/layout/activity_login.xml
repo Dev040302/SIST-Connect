@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:alpha="0.7"
         android:scaleType="centerCrop"
-         android:src="@drawable/bg"/>
+        android:src="@drawable/bg" />
 
     <ImageView
         android:id="@+id/logo"
@@ -23,6 +23,7 @@
 
     <EditText
         android:id="@+id/registernotxt"
+        android:layout_marginTop="45dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
@@ -44,14 +45,17 @@
         android:textColor="@color/white"
         android:textColorHint="@color/black"
         android:textStyle="bold" />
-    
-    <Button
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signinbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordtxt"
-        android:text="SIGN IN"
-        android:id="@+id/signinbtn"
-        android:layout_marginHorizontal="16dp"/>
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/button"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textSize="20dp" />
 
     <View
         android:layout_width="match_parent"
@@ -63,6 +67,7 @@
         />
 
     <TextView
+        android:id="@+id/signupnote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Do have a account Signup Below?"
@@ -73,14 +78,20 @@
         android:layout_below="@id/signinbtn"
         android:layout_marginTop="16dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signupbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/signinbtn"
-        android:text="SIGN up"
-        android:id="@+id/signupbtn"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="36dp"/>
+        android:layout_marginTop="45dp"
+        android:background="@drawable/signin"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+
+        />
 
     
 

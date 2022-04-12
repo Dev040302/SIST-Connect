@@ -5,17 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignupActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#e6ffff">
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profileimg"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="110dp"
+        android:layout_height="105dp"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"
         android:layout_gravity="center"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:src="@drawable/profileimg"
+
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Register No"
+        android:textColor="@color/red"
+        android:textStyle="bold"
         android:layout_margin="16dp"
         android:id="@+id/registernotxt"
         android:inputType="number"/>
@@ -35,6 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Mail ID"
+        android:textColor="@color/red"
+        android:textStyle="bold"
         android:layout_margin="16dp"
         android:id="@+id/mailtxt"
         android:inputType="textEmailAddress"/>
@@ -43,6 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name"
+        android:textColor="@color/red"
+        android:textStyle="bold"
         android:layout_margin="16dp"
         android:id="@+id/nametxt"
         android:inputType="text"/>
@@ -51,24 +61,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:layout_margin="16dp"
         android:id="@+id/passwordtxt"
         android:inputType="text"/>
 
-    <Spinner
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:id="@+id/depart"
-        android:autofillHints=""
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Sign up"
-        android:id="@+id/signupbtn"/>
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@drawable/signin"
+        android:id="@+id/signupbtn"
+        android:textAllCaps="false"/>
 
 
 </LinearLayout>
