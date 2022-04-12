@@ -3,16 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/drawable/button.xml" value="0.26205128205128203" />
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.26205128205128203" />
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26205128205128203" />
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/drawable/signin.xml" value="0.26205128205128203" />
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_feeds.xml" value="0.25" />
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_mainactivity.xml" value="0.12708333333333333" />
         <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_signup.xml" value="0.25" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/drawable/button.xml" value="0.26666666666666666" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26666666666666666" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/drawable/profile.xml" value="0.26666666666666666" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/drawable/signin.xml" value="0.26666666666666666" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_mainactivity.xml" value="0.16077898550724637" />
-        <entry key="..\:/Users/push1/OneDrive/Documents/GitHub/SIST-Connect/SIST-Conect/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/SIST-Connect/SIST-Conect/app/src/main/res/layout/dropdow_item.xml" value="0.25" />
       </map>
     </option>
   </component>

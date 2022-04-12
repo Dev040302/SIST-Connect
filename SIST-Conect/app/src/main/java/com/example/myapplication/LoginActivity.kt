@@ -15,8 +15,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        val text = "<font color=#FF000000>Don't have a account? </font><font color=#ffffff>Signup Below</font>"
-        signupnote.setText(Html.fromHtml(text))
+        
 
         signinbtn.setOnClickListener {
 

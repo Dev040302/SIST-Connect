@@ -28,10 +28,6 @@ class SignupActivity : AppCompatActivity() {
 
         var departments = resources.getStringArray(R.array.Departments)
 
-        var arrayAdapter = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,departments)
-        arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
-
-        depart.adapter=arrayAdapter
 
 
 
@@ -74,7 +70,7 @@ class SignupActivity : AppCompatActivity() {
                         ref.child("Mail").setValue(mail)
                         ref.child("Name").setValue(nametxt.text.toString())
                         ref.child("Reg_no").setValue(registernotxt.text.toString())
-                        ref.child("Dept").setValue(depart.selectedItem.toString())
+                        //ref.child("Dept").setValue(depart.selectedItem.toString())
 
                         ref=Firebase.database.reference.child("Reg_No").child(registernotxt.text.toString())
                         ref.setValue(mail)
