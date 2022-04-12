@@ -83,6 +83,10 @@ class SignupActivity : AppCompatActivity() {
                         startActivity(intent)
                     }
                 }
+
+                else{
+                    Toast.makeText(this,"Unable to Signup",Toast.LENGTH_SHORT)
+                }
             }
 
         }
