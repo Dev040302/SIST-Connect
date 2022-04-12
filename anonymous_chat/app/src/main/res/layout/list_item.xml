@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:text="DEV"
         android:textSize="16dp"
+        android:textStyle="bold"
         android:id="@+id/id"
         android:textColor="@color/black"
         android:layout_marginLeft="16dp"/>
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="DEV"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_below="@id/id"
         android:id="@+id/msgtxt"
         android:layout_marginLeft="16dp"/>
