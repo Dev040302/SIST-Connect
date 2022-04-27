@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "172988770846",
+    "project_id": "sist-connect-346913",
+    "storage_bucket": "sist-connect-346913.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172988770846:android:b634b1f13a1be2039e5c0f",
+        "android_client_info": {
+          "package_name": "com.example.sistconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172988770846-0lhd266nkbq1b15saqa1ih0gicnlh3jh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sistconnect",
+            "certificate_hash": "649effc4bd213b1d47117e69701325419d5b2c8f"
+          }
+        },
+        {
+          "client_id": "172988770846-0kifj2r68uuh7n7fcorr1jifsm9c9iam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEa7qjA870FIL5R6WWsWJYSQ3VN9gNl-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172988770846-0kifj2r68uuh7n7fcorr1jifsm9c9iam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
