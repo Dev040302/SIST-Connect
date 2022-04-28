@@ -98,13 +98,16 @@ class SignInActivity : AppCompatActivity() {
             firebaseAuthWithGoogle(account.idToken!!)
         } catch (e: ApiException) {
             Log.w(TAG, "signInResult:failed code=" + e.statusCode)
-
         }
     }
 
     private fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         signInButton.visibility = View.GONE
+        registernotxt.visibility=View.GONE
+        passwordtxt.visibility=View.GONE
+        signinbtn.visibility=View.GONE
+        line.visibility=View.GONE
         progressBar.visibility = View.VISIBLE
         GlobalScope.launch(Dispatchers.IO) {
             val auth = auth.signInWithCredential(credential).await()
@@ -128,6 +131,10 @@ class SignInActivity : AppCompatActivity() {
             finish()
         } else {
             signInButton.visibility = View.VISIBLE
+            registernotxt.visibility=View.VISIBLE
+            passwordtxt.visibility=View.VISIBLE
+            signinbtn.visibility=View.VISIBLE
+            line.visibility=View.VISIBLE
             progressBar.visibility = View.GONE
         }
     }

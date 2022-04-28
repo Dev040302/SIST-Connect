@@ -24,11 +24,11 @@
 
     <EditText
         android:id="@+id/registernotxt"
-        android:layout_marginTop="45dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
         android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="45dp"
         android:hint="RegisterNumber:"
         android:inputType="number"
         android:textColor="@color/white"
@@ -60,6 +60,7 @@
         android:textSize="20dp" />
 
     <View
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@id/signinbtn"
@@ -69,6 +70,7 @@
 
     <TextView
         android:id="@+id/signupnote"
+        android:text="signin note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/signinbtn"
