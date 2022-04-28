@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".diss"
+            android:exported="false" />
+        <activity
             android:name=".Reg"
             android:exported="false" />
         <activity
