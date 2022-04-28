@@ -52,10 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/passwordtxt"
-        android:layout_marginHorizontal="16dp"
         android:layout_centerHorizontal="true"
-        android:background
-            ="@drawable/button"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/button"
         android:text="Log In"
         android:textAllCaps="false"
         android:textSize="20dp" />
@@ -63,11 +62,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"
+        android:layout_below="@id/signinbtn"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/signinbtn"
-        />
+        android:background="@color/black" />
 
     <TextView
         android:id="@+id/signupnote"
@@ -82,14 +80,14 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInButton"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/signupnote"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
 
         android:visibility="visible" />
     <ProgressBar
