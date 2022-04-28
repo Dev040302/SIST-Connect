@@ -66,9 +66,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 })
             }
-
         }
-
     }
 
     private fun AddMarker(lat: Double, long: Double, toString: String) {
