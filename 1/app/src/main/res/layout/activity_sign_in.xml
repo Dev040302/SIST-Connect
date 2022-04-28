@@ -70,12 +70,12 @@
 
     <TextView
         android:id="@+id/signupnote"
-        android:text="signin note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/signinbtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
+        android:text="signin note"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold|italic" />

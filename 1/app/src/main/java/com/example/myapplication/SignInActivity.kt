@@ -107,6 +107,7 @@ class SignInActivity : AppCompatActivity() {
         registernotxt.visibility=View.GONE
         passwordtxt.visibility=View.GONE
         signinbtn.visibility=View.GONE
+        signupnote.visibility=View.GONE
         line.visibility=View.GONE
         progressBar.visibility = View.VISIBLE
         GlobalScope.launch(Dispatchers.IO) {
@@ -130,6 +131,7 @@ class SignInActivity : AppCompatActivity() {
             startActivity(mainActivityIntent)
             finish()
         } else {
+            signupnote.visibility=View.VISIBLE
             signInButton.visibility = View.VISIBLE
             registernotxt.visibility=View.VISIBLE
             passwordtxt.visibility=View.VISIBLE
