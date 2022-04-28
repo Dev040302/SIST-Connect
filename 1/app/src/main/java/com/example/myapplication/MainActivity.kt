@@ -3,11 +3,15 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.daos.PostDao
 import com.example.myapplication.models.Post
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,7 +29,7 @@ class MainActivity : AppCompatActivity(), IPostAdapter {
             startActivity(intent)
         }
 
-        navigation_view.inflateMenu(R.menu.navigation)
+
 
         setUpRecyclerView()
 
@@ -34,6 +38,19 @@ class MainActivity : AppCompatActivity(), IPostAdapter {
             drawer.openDrawer(GravityCompat.START)
 
         }
+
+        navigation_view.setNavigationItemSelectedListener(NavigationView.OnNavigationItemSelectedListener { item ->
+            val id = item.itemId
+            drawer.closeDrawer(GravityCompat.START)
+            when (id) {
+                R.id.chat -> {
+                    intent = Intent(this@MainActivity, Chat::class.java)
+                    startActivity(intent)
+                }
+                else -> return@OnNavigationItemSelectedListener true
+            }
+            true
+        })
 
     }
 

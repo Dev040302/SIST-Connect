@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reg"
+    android:background="@drawable/bglogin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="ANONYMOUS\nCHAT"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/title"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/anomid"
+        android:inputType="text"
+        android:layout_margin="8dp"
+        android:hint="Anonymous ID"
+        android:background="@drawable/edit_bg"
+        android:textColorHint="#60000000"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:layout_centerInParent="true"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/depart"
+        android:layout_below="@id/anomid"
+
+        />
+
+
+
+</RelativeLayout>
