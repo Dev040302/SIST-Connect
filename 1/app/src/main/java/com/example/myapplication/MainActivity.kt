@@ -1,17 +1,14 @@
 package com.example.myapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.daos.PostDao
 import com.example.myapplication.models.Post
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.navigation.NavigationView
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -23,6 +20,8 @@ class MainActivity : AppCompatActivity(), IPostAdapter {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportActionBar!!.hide()
 
         fab.setOnClickListener{
             val intent = Intent(this, CreatePostActivity::class.java)
@@ -45,6 +44,11 @@ class MainActivity : AppCompatActivity(), IPostAdapter {
             when (id) {
                 R.id.chat -> {
                     intent = Intent(this@MainActivity, Chat::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.bus_track -> {
+                    intent = Intent(this@MainActivity, MapsActivity::class.java)
                     startActivity(intent)
                 }
                 else -> return@OnNavigationItemSelectedListener true
