@@ -17,5 +17,4 @@
         android:icon="@drawable/ic_baseline_tips_and_updates_24"
         android:title="MoreFeatures To add" />
 
-
 </menu>
