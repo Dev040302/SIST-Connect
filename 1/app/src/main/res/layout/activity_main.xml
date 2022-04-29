@@ -14,14 +14,16 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/bar">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="SIST - Connect"
+                app:title="SISTConnect"
                 app:titleTextColor="@color/white"
+                android:background="@color/red"
                 app:navigationIcon="@drawable/ic_baseline_menu_24"/>
 
 

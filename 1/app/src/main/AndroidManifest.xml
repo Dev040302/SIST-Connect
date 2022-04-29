@@ -36,7 +36,8 @@
         <activity
             android:name=".MapsActivity"
             android:exported="false"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"
+            android:theme="@style/Theme.MyApplication.NoActionBar"/>
         <activity
             android:name=".Bus_Tracker"
             android:exported="false" />
@@ -45,10 +46,12 @@
             android:exported="false" />
         <activity
             android:name=".Reg"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.NoActionBar"/>
         <activity
             android:name=".Chat"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.NoActionBar"/>
         <activity
             android:name=".CreatePostActivity"
             android:exported="false" />

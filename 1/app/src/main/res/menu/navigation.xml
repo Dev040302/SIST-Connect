@@ -5,10 +5,12 @@
 
     <item
         android:id="@+id/chat"
-        android:title="Anomous Chat" />
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="AnonymousChat"/>
 
     <item
         android:id="@+id/bus_track"
-        android:title="Bus Tracker" />
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="BusTracker" />
 
 </menu>
